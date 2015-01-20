@@ -1,4 +1,5 @@
 === Recent Posts Slider Responsive ===
+
 Contributors: dilemma123	
 Donate link: http://www.anitamourya.com/donate
 Tags: responsive slider, responsive carousel, posts, recent, recent posts, recent post, slider, latest posts, posts slider, posts carousel
