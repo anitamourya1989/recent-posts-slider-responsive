@@ -1,11 +1,17 @@
 === Recent Posts Slider Responsive ===
 
-Contributors: dilemma123	
+Contributors: dilemma123
+
 Donate link: http://www.anitamourya.com/donate
+
 Tags: responsive slider, responsive carousel, posts, recent, recent posts, recent post, slider, latest posts, posts slider, posts carousel
+
 Requires at least: 1.0.0
+
 Tested up to: 4.1
+
 Stable tag: /trunk/
+
 License: GPLv2 or later
 
 Recent posts slider responsive displays your blog's recent posts using flexisel carousel.
@@ -25,9 +31,9 @@ If you find it useful please don't forget to rate this plugin.
 = Installation =
 
 1. You can use the built-in installer.
-     OR         
-     Download the zip file and extract the contents.
-     Upload the 'recent-posts-slider-responsive' folder to your plugins directory (wp-content/plugins/).
+	OR
+	Download the zip file and extract the contents.
+	Upload the 'recent-posts-slider-responsive' folder to your plugins directory (wp-content/plugins/).
 1. Activate the plugin through the 'Plugins' menu in WordPress.
 
 Now go to **Settings** and then **Recent Posts Slider Responsive** to configure any options as desired.
@@ -44,9 +50,11 @@ or use rpf_display_slider($category_ids, $total_posts, $post_per_slide, $post_in
 == Frequently Asked Questions ==
 
 = Why there is need for Slider id? =
+
 If you use many sliders in the same page, then it is necessary to have different id for the div that we use to display the sliders, neither there will be clash as the div's will have same id.
 
 = Having problems, questions, bugs & suggestions =
+
 Please add them in WordPress Plugin support section
 
 == Screenshots ==
