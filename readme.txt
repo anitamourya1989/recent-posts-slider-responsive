@@ -4,7 +4,8 @@ Donate link: http://www.anitamourya.com/donate
 Tags: responsive slider, responsive carousel, posts, recent, recent posts, recent post, slider, latest posts, posts slider, posts carousel
 Requires at least: 1.0.0
 Tested up to: 4.1
-Stable tag: 0.7.5
+Stable tag: /trunk/
+License: GPLv2 or later
 
 Recent posts slider responsive displays your blog's recent posts using flexisel carousel.
 
@@ -53,5 +54,10 @@ Please add them in WordPress Plugin support section
 
 == Changelog ==
 
-= v0.1 =
+= 1.0.0 =
+* Initial release version.
+
+== Upgrade Notice ==
+
+= 1.0.0 =
 * Initial release version.
