@@ -208,7 +208,7 @@ function rpf_display_slider( $category_ids=null, $total_posts=null, $post_per_sl
 
 class RpfWidget extends WP_Widget {
     function RpfWidget() {
-        parent::WP_Widget(false, $name = __('Recent Posts Slider Responsive','rpf'), array( 'description' => __( 'Get your responsive recent posts slider','rpf') ));	
+        parent::WP_Widget(false, $name = __('Recent Posts Slider Responsive','rpf'), array( 'description' => __( 'Get your responsive recent posts slider','rpf') ));
     }
 
     function widget($args, $instance) {
@@ -218,11 +218,12 @@ class RpfWidget extends WP_Widget {
         $total_posts = apply_filters('widget_title', $instance['total_posts']);
         $post_include_ids = apply_filters('widget_title', $instance['post_include_ids']);
         $post_exclude_ids = apply_filters('widget_title', $instance['post_exclude_ids']);
+        $slider_id = apply_filters('widget_title', $instance['slider_id']);
 		echo $before_widget;
         if ( $title )
 			echo $before_title . $title . $after_title;
 		if (function_exists('rpf_display_slider'))
-			echo rpf_display_slider($category_ids, $total_posts, $post_per_slide, $post_include_ids, $post_exclude_ids, 2); 
+			echo rpf_display_slider($category_ids, $total_posts, $post_per_slide, $post_include_ids, $post_exclude_ids, $slider_id);
 		echo $after_widget;
     }
 
@@ -233,6 +234,7 @@ class RpfWidget extends WP_Widget {
 		$instance['total_posts'] = strip_tags($new_instance['total_posts']);
 		$instance['post_include_ids'] = strip_tags($new_instance['post_include_ids']);
 		$instance['post_exclude_ids'] = strip_tags($new_instance['post_exclude_ids']);
+		$instance['slider_id'] = strip_tags($new_instance['slider_id']);
         return $instance;
     }
 
@@ -242,12 +244,14 @@ class RpfWidget extends WP_Widget {
         $total_posts = esc_attr($instance['total_posts']);
         $post_include_ids = esc_attr($instance['post_include_ids']);
         $post_exclude_ids = esc_attr($instance['post_exclude_ids']);
+        $slider_id = esc_attr($instance['slider_id']);
     ?>
         <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','rpf'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></label></p>
 		<p><label for="<?php echo $this->get_field_id('category_ids'); ?>"><?php _e('Category Ids (Comma seperated):','rpf'); ?> <input class="widefat" id="<?php echo $this->get_field_id('category_ids'); ?>" name="<?php echo $this->get_field_name('category_ids'); ?>" type="text" value="<?php echo $category_ids; ?>" /></label></p>
 		<p><label for="<?php echo $this->get_field_id('total_posts'); ?>"><?php _e('Total Posts:','rpf'); ?> <input class="widefat" id="<?php echo $this->get_field_id('total_posts'); ?>" name="<?php echo $this->get_field_name('total_posts'); ?>" type="text" value="<?php echo $total_posts; ?>" /></label></p>
 		<p><label for="<?php echo $this->get_field_id('post_include_ids'); ?>"><?php _e('Posts to include (Comma seperated):','rpf'); ?> <input class="widefat" id="<?php echo $this->get_field_id('post_include_ids'); ?>" name="<?php echo $this->get_field_name('post_include_ids'); ?>" type="text" value="<?php echo $post_include_ids; ?>" /></label></p>
 		<p><label for="<?php echo $this->get_field_id('post_exclude_ids'); ?>"><?php _e('Posts to exclude (Comma seperated):','rpf'); ?> <input class="widefat" id="<?php echo $this->get_field_id('post_exclude_ids'); ?>" name="<?php echo $this->get_field_name('post_exclude_ids'); ?>" type="text" value="<?php echo $post_exclude_ids; ?>" /></label></p>
+		<p><label for="<?php echo $this->get_field_id('post_exclude_ids'); ?>"><?php _e('Slider CSS ID:','rpf'); ?> <input class="widefat" id="<?php echo $this->get_field_id('slider_id'); ?>" name="<?php echo $this->get_field_name('slider_id'); ?>" type="text" value="<?php echo $slider_id; ?>" /></label></p>
     <?php 
     }
 }
