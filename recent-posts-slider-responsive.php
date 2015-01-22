@@ -68,7 +68,7 @@ function rpf_add_script() {
 	if ( is_admin() ){
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'jquery-ui-accordion' );
-		wp_enqueue_style( 'jquery-ui', '//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css' );
+		wp_enqueue_style( 'jquery-ui', WP_PLUGIN_URL.'/recent-posts-slider-responsive/css/jquery-ui.css' );
 	}
 }
 
